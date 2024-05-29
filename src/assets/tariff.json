@@ -1,0 +1,22 @@
+[
+  {
+    "value": "LT-1A",
+    "label": "LT-1A",
+    "disabled": false
+  },
+  {
+    "value": "LT-2B",
+    "label": "LT-2B",
+    "disabled": true
+  },
+  {
+    "value": "LT-3C",
+    "label": "LT-3C",
+    "disabled": true
+  },
+  {
+    "value": "LT-4D",
+    "label": "LT-4D",
+    "disabled": true
+  }
+]
