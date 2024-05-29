@@ -7,6 +7,7 @@ const Radio = ({label,labelClass,checked,classes,disabled}) => {
                 <input
                     type="radio"
                     value="2"
+                    onChange={()=>{}}
                     checked={checked}
                     disabled={disabled}
                     className={classes}

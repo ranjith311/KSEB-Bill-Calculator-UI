@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Select from '../form/Select'
-import tariff from "../../assets/tariff.json"
 import purpose from "../../assets/purpose.json"
 import Radio from '../form/Radio'
 import Input from '../form/Input'
@@ -11,6 +10,17 @@ const Generic = ({ setResult }) => {
   const [units, setUints] = useState(0)
   const [isErr, setIsErr] = useState(false)
   const [errMsg, setErrMsg] = useState("")
+  const [tariff,setTariff] = useState([])
+
+
+
+  useEffect(()=>{
+    API_SERVICES.getTariff().then(({data}) => {
+      setTariff(data?.result ?? [])
+    }).catch((err) => {
+      console.log(err)
+    });
+  },[])
 
 
   const calcualteBill = (e) => {
@@ -21,8 +31,8 @@ const Generic = ({ setResult }) => {
     if (units === 0) {
       setIsErr(true)
       setErrMsg("Please enter consumed units")
+      return;
     }
-
 
     API_SERVICES.calculateBill(units).then(({ data }) => {
       setResult(data?.result ?? 0)

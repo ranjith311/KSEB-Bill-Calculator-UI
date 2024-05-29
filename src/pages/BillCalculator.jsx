@@ -72,7 +72,7 @@ const BillCalculator = () => {
                                                 </tr>
                                                 {
                                                     charges.map((charge) => {
-                                                        return <tr>
+                                                        return <tr key={charge}>
                                                             <td className='p-3 border'>{charge}</td>
                                                             <td className='p-3 border'>0.00</td>
                                                         </tr>
