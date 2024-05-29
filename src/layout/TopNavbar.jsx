@@ -5,7 +5,7 @@ const TopNavbar = () => {
   return (
     <>
     <div className='py-2 px-4'>
-        <img src={eb} />
+        <img alt='kseb-logo' src={eb} />
     </div>
     </>
   )
