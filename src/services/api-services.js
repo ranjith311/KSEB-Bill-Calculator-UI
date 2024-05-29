@@ -5,7 +5,7 @@ import axios from "axios"
 
 
 
-const baseURL = "http://localhost:4000/api"
+let baseURL = "http://localhost:4000/api"
 
 if (window.location.hostname == 'localhost') {
     baseURL = "http://localhost:4000/api"
