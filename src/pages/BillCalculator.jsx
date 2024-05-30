@@ -37,16 +37,16 @@ const BillCalculator = () => {
                 </div>
 
 
-                <div className='lg:w-2/5 w-full my-4'>
+                <div className='lg:w-2/5 w-full my-4' style={{marginBottom:'100px'}}>
                     <div className='h-96 mx-1 lg:mx-0 p-4'>
 
                         {
                             result == 0 ? (
-                                <div className='w-full rounded bg-sky-100 h-96 flex flex-col item-center justify-center'>
+                                <div className='w-full pb-12 rounded bg-sky-100 min-h-96 flex flex-col item-center justify-center'>
                                     <div className='text-center py-2'>
                                         <h2 className='underline'>PANDEMIC - COVID19 - LOCKDOWN PERIOD BILLS</h2>
                                     </div>
-                                    <div className='pl-20 pr-8'>
+                                    <div className='lg:pl-20 pl-12 pr-8'>
                                         <ul className='list-disc'>
                                             <li>During pandemic covid-19, meter reading of a number of consumers were taken after four months. For those consumers, the consumed units for a bi-month is to be calculated by dividing the total consumption by two.</li>
                                             <li>After calculating the value of one bi-month, using bill calculator, multiply the value with two, to obtain the electricity bill amount for four months.</li>
@@ -56,7 +56,7 @@ const BillCalculator = () => {
                                 </div>
 
                             ) : (
-                                <div className='w-full rounded border h-96 drop-shadow-md'>
+                                <div className='w-full rounded border drop-shadow-md'>
                                     <div className=''>
                                         <table className="table-fixed w-full">
                                             <thead className='bg-sky-600 text-white '>
